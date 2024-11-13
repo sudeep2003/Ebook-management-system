@@ -1,10 +1,17 @@
-# Use an official Tomcat image with Java pre-installed
-FROM tomcat:9-jdk11
+# Use an official Tomcat image as the base
+FROM tomcat:9.0-jdk11
 
-# Copy the specific WAR file from the target directory to Tomcat's webapps directory
-COPY target/EBook-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
+# Set environment variables for MySQL connection
+ENV MYSQL_HOST=mysql
+ENV MYSQL_PORT=3306
+ENV MYSQL_DATABASE=ebookdb
+ENV MYSQL_USER=root
+ENV MYSQL_PASSWORD=my-secret-pw
 
-# Expose port 8080 to access the application
+# Copy your application WAR file or source files into the Tomcat webapps directory
+COPY target/EBook-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/EBook.war
+
+# Expose port 8080 for the application
 EXPOSE 8080
 
 # Start Tomcat server

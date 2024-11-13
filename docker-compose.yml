@@ -1,3 +1,4 @@
+# version: '3.8'
 
 services:
   web:
@@ -24,6 +25,21 @@ services:
       MYSQL_DATABASE: ebookdb
     ports:
       - "3306:3306"
+    volumes:
+      - ./docker/sql:/docker-entrypoint-initdb.d
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      MYSQL_ROOT_PASSWORD: my-secret-pw
+    ports:
+      - "8081:80"
+    depends_on:
+      - mysql
     networks:
       - app-network
 
