@@ -53,10 +53,10 @@ CREATE TABLE IF NOT EXISTS BookOrder (
     orderTime TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Load Sample Data into Books Table if sample_data.csv is available
-LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/sample_data.csv'
-INTO TABLE Books
-FIELDS TERMINATED BY ',' ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS
-(bookName, author, price, bookCategory, status, photoName, email);
+-- -- Load Sample Data into Books Table if sample_data.csv is available
+-- LOAD DATA LOCAL INFILE '/docker-entrypoint-initdb.d/sample_data.csv'
+-- INTO TABLE Books
+-- FIELDS TERMINATED BY ',' ENCLOSED BY '"'
+-- LINES TERMINATED BY '\n'
+-- IGNORE 1 ROWS
+-- (bookName, author, price, bookCategory, status, photoName, email);
