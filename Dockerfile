@@ -9,7 +9,7 @@ ENV MYSQL_USER=root
 ENV MYSQL_PASSWORD=my-secret-pw
 
 # Copy your application WAR file or source files into the Tomcat webapps directory
-COPY target/EBook-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/EBook.war
+COPY target/EBook-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose port 8080 for the application
 EXPOSE 8080

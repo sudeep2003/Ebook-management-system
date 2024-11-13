@@ -21,7 +21,7 @@ public class DBConnection {
                 // Driver class load
                 Class.forName("com.mysql.jdbc.Driver");
                 // Create Connection
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/ebook", "root", "111111");
+                con = DriverManager.getConnection("jdbc:mysql://mysql:3306/ebookdb", "root", "my-secret-pw");
             }
         } catch (Exception e) {
             e.printStackTrace();
