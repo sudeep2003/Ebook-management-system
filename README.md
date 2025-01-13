@@ -1,7 +1,7 @@
 # E-Book Management System
-This project contain only to store the book and user can buy your books through e-book management system.
+This project contains only to store the book and users can buy your books through the e-book management system.
 <br>
-This is the my thrid Projec using JSP and Servlet.
+This Project is using JSP and Servlet.
 ## Features
 - Admin and Normal both
 - Create, Update, View & Delete Books.
@@ -12,7 +12,7 @@ This is the my thrid Projec using JSP and Servlet.
 ## Client Side
 - HTML
 - CSS
-- Boostrap
+- Bootstrap
 - JSP
 ## Server Side
 - Java
